@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class TodoListManager {
+    main()
+    start()
+}
+class TodoListManagerController {
+    model: TodoListModel
+    'GUI event handlers'
+}
+class TodoListModel {
+    title : String
+    TodoListItem : Collection
+
+    resultDisplay: TextField
+    addList()
+    removeList()
+    editTitle()
+    addItem()
+    removeItem()
+    editItemDescription()
+    editItemDueDate()
+    markComplete()
+    displayAllItems()
+    displayIncompleteItems()
+    displayCompleteItems()
+    saveItemsInSingleList()
+    saveItemsInAllList()
+    loadSingleList()
+    loadMultipleLists()
+}
+
+class TodoListItem {
+    description : String
+    dueDate : integer
+
+    updateDescription(String)
+    updateDueDate(integer)
+    toString(): String
+}
+
+javafx.Application <|-- TodoListManager
+TodoListManager -- TodoListManagerController
+TodoListManagerController *--> TodoListModel
+TodoListModel *-> TodoListItem
+
+@enduml
