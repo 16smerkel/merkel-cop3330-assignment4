@@ -151,6 +151,16 @@ public class TodoListManagerController {
     public void isIncompleteCheck(){
         // check if the boolean complete in item is false
     }
+    
+    public void didItemInOneListSave(){
+        // return 1 if every list item successfully saved
+    }
+
+    public void didItemInEveryListSave(){
+        // return 1 if every list item successfully saved
+        // go to the next list and repeat process
+        // end entire process by returning 0 if item didnt save
+    }
 
     public void loadTitle(){
         // check if the user's input equals the actual
